@@ -10,8 +10,7 @@ COPY yarn.lock /usr/src/app
 
 # Production use node instead of root
 # USER node
-ENV YARN_CACHE_FOLDER=/dev/shm/yarn_cache
-RUN yarn install --production --frozen-lockfile
+RUN yarn install --production 
 
 COPY . /usr/src/app
 
