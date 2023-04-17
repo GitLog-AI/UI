@@ -36,7 +36,7 @@ export default function CloudFlareCaptcha(props: { setVerified: Dispatch<SetStat
 async function verify(token: string): Promise<boolean> {
     console.log("[CloudFlareCaptcha] Verifying")
 
-    const response = await fetch((process.env.NEXT_PUBLIC_URL ?? "https://beta.deepporn.ai") + '/api/verifyTurnstile', {
+    const response = await fetch((process.env.NEXT_PUBLIC_URL) + '/api/verifyTurnstile', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

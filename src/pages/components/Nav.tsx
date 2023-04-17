@@ -38,10 +38,10 @@ export default function NavBar() {
             <Navbar.Content hideIn="xs">
                 <Navbar.Item>
                     <div className="flex items-center">
-                        <a href="https://discord.gg/euvyufrnDa"><FaDiscord className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
-                        <a href="https://twitter.com/DeepPorn_AI"><FaTwitter className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
-                        <a href="https://www.reddit.com/r/deeppornai/"><FaReddit className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
-                        <a href="https://www.patreon.com/DeepPorn_AI"><FaPatreon className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
+                        <a href=""><FaDiscord className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
+                        <a href=""><FaTwitter className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
+                        <a href=""><FaReddit className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
+                        <a href=""><FaPatreon className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
                     </div>
                 </Navbar.Item>
                 <Navbar.Item>
@@ -84,10 +84,10 @@ export default function NavBar() {
                 <Navbar.CollapseItem activeColor={"secondary"}>
                     <div className="flex flex-row w-full  justify-between">
                         <div className="flex items-center">
-                            <a href="https://discord.gg/euvyufrnDa"><FaDiscord className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
-                            <a href="https://twitter.com/DeepPorn_AI"><FaTwitter className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
-                            <a href="https://www.reddit.com/r/deeppornai/"><FaReddit className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
-                            <a href="https://www.patreon.com/DeepPorn_AI"><FaPatreon className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
+                            <a href=""><FaDiscord className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
+                            <a href=""><FaTwitter className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
+                            <a href=""><FaReddit className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
+                            <a href=""><FaPatreon className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
                         </div>
                         <div className="flex items-center gap-4 justify-center">
                             <Switch

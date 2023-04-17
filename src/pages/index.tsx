@@ -34,9 +34,8 @@ export default function Home() {
         <Head>
           <title>GitLog</title>
           <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-          <meta name="description" content="AI Generated Porn. See what you want how you want. Discover the growing collection of AI generated porn." />
-          <meta name="keywords" content='AI Porn, AI Generated Porn, AI Generative Porn, Porn AI, make ai porn, 
-        generative porn, porn using AI, ai porn, deepporn, deepporn.ai '/>
+          <meta name="description" content="" />
+          <meta name="keywords" content=' ' />
         </Head>
 
         {/* Modals */}
