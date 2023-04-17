@@ -1,27 +1,21 @@
-# Stage 1: install dependencies
-FROM node:17-alpine AS deps
-WORKDIR /app
-COPY package*.json .
-ARG NODE_ENV
-ENV NODE_ENV $NODE_ENV
-RUN npm install
+FROM node:alpine
 
-# Stage 2: build
-FROM node:17-alpine AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
-COPY src ./src
-COPY public ./public
-COPY package.json next.config.js jsconfig.json ./
-RUN npm run build
+RUN mkdir -p /usr/src/app
+ENV PORT 3000
 
-# Stage 3: run
-FROM node:17-alpine
-WORKDIR /app
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./
+WORKDIR /usr/src/app
+
+COPY package.json /usr/src/app
+COPY yarn.lock /usr/src/app
+
+# Production use node instead of root
+# USER node
+
+RUN yarn install --production
+
+COPY . /usr/src/app
+
+RUN yarn build
+
 EXPOSE 3000
-ENV PORT=3000
-CMD ["npm", "run", "start"]
+CMD [ "yarn", "start" ]
