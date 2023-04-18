@@ -34,7 +34,7 @@ export default function CloudFlareCaptcha(props: { setVerified: Dispatch<SetStat
 
 
 
-async function verify(token: string): Promise<boolean> {
+async function verify(token: {}): Promise<boolean> {
     console.log("[CloudFlareCaptcha] Verifying")
 
     let base = getBase()

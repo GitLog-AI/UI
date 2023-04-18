@@ -6,9 +6,9 @@ import NavBar from './components/Nav';
 import { Badge, Text, useTheme, Card, Row, Button, Link, Loading, gray, Image } from '@nextui-org/react';
 import Disclaimer from './components/Disclaimer';
 import { useRouter } from 'next/router';
-import Footer from './components/Footer';
 import LoginPopup from './components/LoginPopup';
 import { LoginContext } from '@/context/LoginPopup';
+import Footer from './components/Footer';
 
 export default function Home() {
   const { isDark, type } = useTheme();
@@ -85,7 +85,7 @@ export default function Home() {
 
                 </div>
               </div>
-              <div className="sm:mt-3 lg:mt-5 cursor-pointer    flex flex-column justify-center text-center align-center" onClick={() => { window.location.assign("/explore") }}>
+              <div className="sm:mt-3 lg:mt-5 cursor-pointer    flex flex-column justify-center text-center align-center" onClick={() => { setShowLogin(true) }}>
                 <Card css={{
                   // background: "linear-gradient(45deg, #4d55d1 -20%, #ad32e5 50%)",
                   mw: 350,
