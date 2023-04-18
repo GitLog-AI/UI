@@ -1,11 +1,26 @@
 import { Button, Grid, Loading, Badge } from '@nextui-org/react';
-import { Dispatch, SetStateAction, useState } from 'react';
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import CloudFlareCaptcha from './Captcha';
 
 export default function Disclaimer(props: { setDisplay: Dispatch<SetStateAction<boolean>> }) {
     const [verified, setVerified] = useState<boolean>()
     const { setDisplay } = props
     const handleYes = () => { setDisplay(false); localStorage.setItem('hasAgreedDisclaimer', "true"); }
+
+    const [showContinue, setShowContinue] = useState(false);
+
+    useEffect(() => {
+        let timer: NodeJS.Timeout;
+
+        if (!verified) {
+            timer = setTimeout(() => {
+                setShowContinue(true);
+            }, 30000);
+        }
+
+        return () => clearTimeout(timer);
+    }, [verified]);
+
 
     return (
         <div className='fixed inset-0 bg-opacity-70 bg-gray-100 backdrop-blur-lg flex justify-center items-center' style={{ zIndex: "9999" }}>
@@ -15,11 +30,11 @@ export default function Disclaimer(props: { setDisplay: Dispatch<SetStateAction<
                 </div>
                 <div className="flex items-center mb-4">
                     <div>
-                        <h1 className="text-3xl font-bold text-black">Welcome to GitLog</h1>
+                        <h1 className="text-3xl font-bold text-black">Disclaimer</h1>
                     </div>
                 </div>
                 <div>
-                    <p className="text-gray-700">Checking if you are a human...</p>
+                    <p className="text-gray-700">Warning, this site is for adults only. It contains AI-generated adult imagery. By entering this website, I agree that I am 18 years old or more.</p>
                 </div>
                 <div className="flex flex-col gap-4 pt-4 justify-center items-center">
                     <CloudFlareCaptcha setVerified={setVerified} />
@@ -31,12 +46,10 @@ export default function Disclaimer(props: { setDisplay: Dispatch<SetStateAction<
                             <Loading color="currentColor" size="sm" />
                         </Button>
                     }
+                    {showContinue && !verified && <a className={"text-gray-500"} onClick={handleYes}>Continue</a>}
                 </div>
             </div>
         </div>
-
-
-
 
     );
 

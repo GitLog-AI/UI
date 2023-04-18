@@ -36,7 +36,7 @@ export default function CloudFlareCaptcha(props: { setVerified: Dispatch<SetStat
 async function verify(token: string): Promise<boolean> {
     console.log("[CloudFlareCaptcha] Verifying")
 
-    const response = await fetch(("http://localhost:3000") + '/api/auth/verifyTurnstile', {
+    const response = await fetch('/api/auth/verifyTurnstile', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

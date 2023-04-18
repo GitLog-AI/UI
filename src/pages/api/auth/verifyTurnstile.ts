@@ -16,7 +16,7 @@ export default async function handler(
     res: NextApiResponse<Output>
 ) {
     console.log("[/api/authverifyTurnstile] Sending challenge token to CloudFlare")
-    let secret = "0x4AAAAAAAEEjhhQoAovwo-GxIPrm8xDY9U"
+    let secret = process.env.TURNSTILE_SITE_SECRET
     if (secret) {
         const body = `secret=${encodeURIComponent(secret)}&response=${encodeURIComponent(req.body.token)}`
         const url = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
