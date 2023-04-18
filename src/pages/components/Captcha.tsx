@@ -38,7 +38,7 @@ async function verify(token: string): Promise<boolean> {
     console.log("[CloudFlareCaptcha] Verifying")
 
     let base = getBase()
-    const response = await fetch(base + '/api/auth/verifyTurnstile', {
+    const response = await fetch("https://gitlog.ai" + '/api/auth/verifyTurnstile', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
