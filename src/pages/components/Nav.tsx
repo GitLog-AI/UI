@@ -32,8 +32,8 @@ export default function NavBar() {
                 <Badge enableShadow disableOutline color="default" >Early Access</Badge>
             </Navbar.Brand>
             <Navbar.Content hideIn="xs" variant="highlight-rounded" activeColor={"secondary"}>
-                <Navbar.Link href="/early" isActive={router.pathname === '/early'}>Early Access</Navbar.Link>
-                <Navbar.Link href="/pricing" isActive={router.pathname === '/pricing'}>Pricing</Navbar.Link>
+                {/* <Navbar.Link href="/early" isActive={router.pathname === '/early'}>Early Access</Navbar.Link>
+                <Navbar.Link href="/pricing" isActive={router.pathname === '/pricing'}>Pricing</Navbar.Link> */}
             </Navbar.Content>
             <Navbar.Content hideIn="xs">
                 <Navbar.Item>
@@ -41,7 +41,6 @@ export default function NavBar() {
                         <a href=""><FaDiscord className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
                         <a href=""><FaTwitter className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
                         <a href=""><FaReddit className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
-                        <a href=""><FaPatreon className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
                     </div>
                 </Navbar.Item>
                 <Navbar.Item>
@@ -87,7 +86,6 @@ export default function NavBar() {
                             <a href=""><FaDiscord className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
                             <a href=""><FaTwitter className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
                             <a href=""><FaReddit className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
-                            <a href=""><FaPatreon className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
                         </div>
                         <div className="flex items-center gap-4 justify-center">
                             <Switch
@@ -117,7 +115,7 @@ export default function NavBar() {
                         </div>
                     </div>
                 </Navbar.CollapseItem>
-                <Navbar.CollapseItem activeColor={"secondary"}>
+                {/* <Navbar.CollapseItem activeColor={"secondary"}>
                     <h6 className="font-bold"> Navigate </h6>
                 </Navbar.CollapseItem>
                 <Navbar.CollapseItem activeColor={"secondary"}>
@@ -128,7 +126,7 @@ export default function NavBar() {
                 </Navbar.CollapseItem>
                 <Navbar.CollapseItem activeColor={"secondary"}>
                     <Link onClick={() => window.location.assign("/pricing")}> Pricing </Link>
-                </Navbar.CollapseItem>
+                </Navbar.CollapseItem> */}
                 <Navbar.CollapseItem activeColor={"secondary"}>
                     <h6 className="font-bold"> Account </h6>
                 </Navbar.CollapseItem>
@@ -136,7 +134,7 @@ export default function NavBar() {
                     <Progress color="primary" size="xs" value={0} />
                 </Navbar.CollapseItem>
                 <Navbar.CollapseItem activeColor={"secondary"}>
-                    <Link onClick={() => window.location.assign("/api/auth/logout")}> Logout </Link>
+                    <Link onClick={() => window.location.assign("/api/auth/logout")}> Login </Link>
                 </Navbar.CollapseItem>
             </Navbar.Collapse>
         </Navbar>

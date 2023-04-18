@@ -5,7 +5,7 @@ export default function CloudFlareCaptcha(props: { setVerified: Dispatch<SetStat
     const [token, setToken] = useState<string>()
     const setVerified = props.setVerified
     const ref = useRef<TurnstileInstance>(null)
-    const siteKey: string | undefined = "0x4AAAAAAADT03iYw5TsWnA0"
+    const siteKey: string | undefined = "0x4AAAAAAAEEjqzUmWZIbov5"
 
     if (siteKey) {
 
@@ -36,7 +36,7 @@ export default function CloudFlareCaptcha(props: { setVerified: Dispatch<SetStat
 async function verify(token: string): Promise<boolean> {
     console.log("[CloudFlareCaptcha] Verifying")
 
-    const response = await fetch((process.env.NEXT_PUBLIC_URL) + '/api/verifyTurnstile', {
+    const response = await fetch(("http://localhost:3000") + '/api/auth/verifyTurnstile', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -44,9 +44,9 @@ async function verify(token: string): Promise<boolean> {
         body: JSON.stringify({ token })
     })
 
-    const data = await response
+    console.log(response.status)
 
-    if (data.status === 200) {
+    if (response.status === 200) {
         console.log("[CloudFlareCaptcha] Verified")
         return true
     }
