@@ -1,5 +1,6 @@
 import { useState, useRef, Dispatch, SetStateAction } from 'react'
 import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
+import getBase from '@/utils/api/base';
 // import env from "@beam-australia/react-env"
 export default function CloudFlareCaptcha(props: { setVerified: Dispatch<SetStateAction<boolean | undefined>> }) {
     const [token, setToken] = useState<string>()
@@ -36,7 +37,8 @@ export default function CloudFlareCaptcha(props: { setVerified: Dispatch<SetStat
 async function verify(token: string): Promise<boolean> {
     console.log("[CloudFlareCaptcha] Verifying")
 
-    const response = await fetch('/api/auth/verifyTurnstile', {
+    let base = getBase()
+    const response = await fetch(base + '/api/auth/verifyTurnstile', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

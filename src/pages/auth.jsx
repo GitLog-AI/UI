@@ -1,5 +1,5 @@
 import React from "react";
-import signUp from "../utils/Firebase/signUp";
+import signUp from "../utils/firebase/signUp";
 import { useRouter } from 'next/navigation'
 
 function Page() {
