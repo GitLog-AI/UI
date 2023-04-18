@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Head from 'next/head';
 import Typewriter from "typewriter-effect"
 import AuthComponent from './components/AuthComponent';
@@ -7,9 +7,12 @@ import { Badge, Text, useTheme, Card, Row, Button, Link, Loading, gray, Image } 
 import Disclaimer from './components/Disclaimer';
 import { useRouter } from 'next/router';
 import Footer from './components/Footer';
+import LoginPopup from './components/LoginPopup';
+import { LoginContext } from '@/context/LoginPopup';
 
 export default function Home() {
   const { isDark, type } = useTheme();
+  const { showLogin, setShowLogin } = useContext(LoginContext);
 
   const router = useRouter();
 
@@ -45,6 +48,12 @@ export default function Home() {
             <Disclaimer setDisplay={setDisplay} />
           </div>
         )}
+
+        {
+          showLogin && (
+            <LoginPopup />
+          )
+        }
 
         {/* Content */}
 

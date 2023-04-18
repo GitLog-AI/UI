@@ -2,7 +2,8 @@ import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import { NextUIProvider, createTheme } from '@nextui-org/react';
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-import { AuthUserProvider } from '../context/Auth'
+import { useState } from 'react';
+import { LoginContext } from '@/context/LoginPopup';
 const lightTheme = createTheme({
   type: "light",
 });
@@ -13,9 +14,10 @@ const darkTheme = createTheme({
 
 
 export default function App({ Component, pageProps }: AppProps) {
+  const [showLogin, setShowLogin] = useState(false);
   return (
     // 2. Use at the root of your app
-    <AuthUserProvider>
+    <LoginContext.Provider value={{ showLogin, setShowLogin }}>
       <NextUIProvider>
         <NextThemesProvider
           defaultTheme="system"
@@ -28,8 +30,8 @@ export default function App({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </NextThemesProvider>
       </NextUIProvider>
+    </LoginContext.Provider>
 
-    </AuthUserProvider>
   );
 }
 

@@ -26,7 +26,7 @@
     "src/context/Auth.js",
     "src/context/Auth.",
     "src/utils/firebase/useFirebaseAuth.js",
-    "src/pages/auth.jsx"
+    "src/pages/auth.tsx"
   ],
   "exclude": ["node_modules"]
 }
