@@ -30,11 +30,11 @@ export default function Disclaimer(props: { setDisplay: Dispatch<SetStateAction<
                 </div>
                 <div className="flex items-center mb-4">
                     <div>
-                        <h1 className="text-3xl font-bold text-black">Disclaimer</h1>
+                        <h1 className="text-3xl font-bold text-black">Welcome to GitLog</h1>
                     </div>
                 </div>
                 <div>
-                    <p className="text-gray-700">Warning, this site is for adults only. It contains AI-generated adult imagery. By entering this website, I agree that I am 18 years old or more.</p>
+                    <p className="text-gray-700">Checking if you are a human ...</p>
                 </div>
                 <div className="flex flex-col gap-4 pt-4 justify-center items-center">
                     <CloudFlareCaptcha setVerified={setVerified} />
