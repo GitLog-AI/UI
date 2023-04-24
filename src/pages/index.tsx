@@ -131,7 +131,7 @@ export default function Home() {
 
                         </div>
                       </div>
-                      <a href="https://discord.gg/pPEd73MyN4">
+                      <a href="https://discord.gg/fwxY8hnzWr">
                         <div className="text-9xl flex text-center items-center align-center w-full bg-gradient-to-r from-blue-500 to-pink-500 rounded-2xl">
                           <FaDiscord className="text-center w-full" />
                         </div>

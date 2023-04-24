@@ -38,7 +38,7 @@ export default function NavBar() {
             <Navbar.Content hideIn="xs">
                 <Navbar.Item>
                     <div className="flex items-center">
-                        <a href="https://discord.gg/pPEd73MyN4"><FaDiscord className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
+                        <a href="https://discord.gg/fwxY8hnzWr"><FaDiscord className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
                         <a href=""><FaTwitter className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
                         <a href=""><FaReddit className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
                     </div>
@@ -83,7 +83,7 @@ export default function NavBar() {
                 <Navbar.CollapseItem activeColor={"secondary"}>
                     <div className="flex flex-row w-full  justify-between">
                         <div className="flex items-center">
-                            <a href="https://discord.gg/pPEd73MyN4"><FaDiscord className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
+                            <a href="https://discord.gg/fwxY8hnzWr"><FaDiscord className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
                             <a href=""><FaTwitter className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
                             <a href=""><FaReddit className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
                         </div>
