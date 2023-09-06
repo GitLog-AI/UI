@@ -113,7 +113,7 @@ export default function LoginPopup(props: {}) {
                     <div className="w-full text-black-200">
                         <Divider type="secondary" />
                     </div>
-                    <p className="text-2xl font-semibold text-white">Email (passwordless)</p>
+                    <p className="text-2xl font-semibold text-white">Email</p>
                     <div className="relative  w-full h-full text-center sm:text-left text-white">
                         <Input {...bindings} width={"100%"} style={{ "color": "white" }} type={invalidEmail ? "error" : "secondary"} placeholder="..." scale={5 / 3} />
                         <div className="absolute top-0 right-1 h-full flex items-center">
