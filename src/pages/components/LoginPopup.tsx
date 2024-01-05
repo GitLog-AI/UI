@@ -104,7 +104,7 @@ export default function LoginPopup(props: {}) {
                 <div className="flex flex-col gap-2 items-center text-center mb-4">
 
                     <h1 className="text-5xl font-bold">Login to <span className="text-blue-500">GitLog</span></h1>
-                    <p className="text-2xl">Join early access now!  <span className="mx-2"> 🚀</span></p>
+                    <p className="text-2xl">Join now!  <span className="mx-2"> 🚀</span></p>
 
                     <div className="flex flex-col sm:flex-row gap-2 py-4">
                         <Button onClick={signInWithGithub} className="bg-[#2C2E34] hover:bg-blue-500 rounded-xl font-semibold text-lg align-center"><span className="flex flex-row gap-4"><FaGithub className="text-2xl" /> GitHub </span></Button>
