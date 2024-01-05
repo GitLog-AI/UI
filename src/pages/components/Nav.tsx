@@ -43,7 +43,7 @@ export default function NavBar() {
                         <a href=""><FaReddit className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
                     </div>
                 </Navbar.Item>
-                <Navbar.Item>
+                {/* <Navbar.Item>
                     <Switch
                         color={"primary"}
                         iconOn={<svg
@@ -68,7 +68,7 @@ export default function NavBar() {
                         onChange={(e) => { setTheme(e.target.checked ? 'dark' : 'light') }}
                     />
 
-                </Navbar.Item>
+                </Navbar.Item> */}
                 <Navbar.Item >
                     <AuthComponent withDropDown />
                 </Navbar.Item>
@@ -76,7 +76,7 @@ export default function NavBar() {
             </Navbar.Content>
 
 
-
+            {/* MOBILE DROPDOWN */}
 
             <Navbar.Toggle showIn="xs" />
             <Navbar.Collapse>
@@ -88,7 +88,7 @@ export default function NavBar() {
                             <a href=""><FaReddit className="h-6 w-6 mx-2 text-gray-600 hover:text-gray-800" /></a>
                         </div>
                         <div className="flex items-center gap-4 justify-center">
-                            <Switch
+                            {/* <Switch
                                 color={"secondary"}
                                 iconOn={<svg
                                     fill="white"
@@ -110,7 +110,7 @@ export default function NavBar() {
                                 </svg>}
                                 checked={isDark}
                                 onChange={(e) => { setTheme(e.target.checked ? 'dark' : 'light') }}
-                            />
+                            /> */}
                             <AuthComponent />
                         </div>
                     </div>

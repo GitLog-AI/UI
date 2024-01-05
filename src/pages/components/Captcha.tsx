@@ -9,9 +9,6 @@ export default function CloudFlareCaptcha(props: { setVerified: Dispatch<SetStat
     const siteKey: string | undefined = "0x4AAAAAAAEEjqzUmWZIbov5"
 
     if (siteKey) {
-
-
-
         return <Turnstile
             siteKey={siteKey}
             options={{
@@ -38,6 +35,7 @@ async function verify(token: {}): Promise<boolean> {
     console.log("[CloudFlareCaptcha] Verifying")
 
     let base = getBase()
+
     const response = await fetch("https://gitlog.ai" + '/api/auth/verifyTurnstile', {
         method: 'POST',
         headers: {
